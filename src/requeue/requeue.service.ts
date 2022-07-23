@@ -53,7 +53,7 @@ export class RequeueService {
         intervalConfig.maximum,
         Math.max(
           intervalConfig.minimum,
-          Math.round(averageDifference / intervalConfig.roundToClosest) *
+          Math.floor(averageDifference / intervalConfig.roundToClosest) *
             intervalConfig.roundToClosest,
         ),
       );
